@@ -12,6 +12,7 @@ df=read.csv(file = 'Data/wingspan_vs_mass.csv')
 head(df)
 
 ####Find any files (recursively) in the Data/ directory that begin with the letter “b” (lowercase)####
+b_files <- list.files(path = "Data", pattern = "^b", recursive = TRUE, full.names = TRUE)
 for (i in b_files) {
   print(readLines(i, n=1))
 }
