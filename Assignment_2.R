@@ -1,0 +1,36 @@
+### practice ###
+scores = read.csv(file = '/Users/haysh/Data_Course_BROWN/Data/1620_scores.csv')
+getwd()
+read.csv(file = 'Data/1620_scores.csv')
+csv_files = list.files(path = 'data' , pattern = '.csv')
+length(csv_files)
+df=read.csv(file = 'Data/wingspan_vs_mass.csv')
+head(df)     
+
+
+####Write a command that lists all of the .csv files found in the Data/ directory and stores that list in an object called “csv_files”####
+csv_files = list.files(path = 'data' , pattern = '.csv')
+
+####Find how many files match that description using the length() function####
+length(csv_files)
+
+####Open the wingspan_vs_mass.csv file and store the contents as an R object named “df” using the read.csv() function####
+df=read.csv(file = 'Data/wingspan_vs_mass.csv')
+
+####Inspect the first 5 lines of this data set using the head() function####
+head(df)
+
+####Find any files (recursively) in the Data/ directory that begin with the letter “b” (lowercase)####
+bfiles <- list.files(path = "Data", pattern = "^b", recursive = TRUE, full.names = TRUE)
+
+biles
+print(bfiles)
+####Write a command that displays the first line of each of those “b” files####
+for (i in b_files) {
+  print(readLines(i, n=1))
+}
+  
+  
+
+
+
