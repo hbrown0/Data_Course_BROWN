@@ -12,9 +12,12 @@ head(df)
 
 ####Find any files (recursively) in the Data/ directory that begin with the letter “b” (lowercase)####
 b_files <- list.files(path = "Data", pattern = "^b", recursive = TRUE, full.names = TRUE)
+<<<<<<< HEAD:Assignments/Assignment_2/Assignment_2.txt
 
 ####Write a command that displays the first line of each of those “b” files####
 b_files <- list.files(path = "Data", pattern = "^b", recursive = TRUE, full.names = TRUE)
+=======
+>>>>>>> 3dcc690f70414f91fe9d0491b383cd8f18934db5:Assignments/Assignment_2/R_Assignment2.txt
 for (i in b_files) {
   print(readLines(i, n=1))
 }
