@@ -1,0 +1,10 @@
+Final Project Idea: 
+
+Biological Time Series Analysis: How do predator and prey dynamics affect the populations of each other over time?
+
+As a zoology major, I am interested in animal dynamics, especially regarding mammals. I identified a publicly available dataset that can address this question using the Canadian lynx and snowshoe hare as a case study to see how their populations shift over time. Being able to visualize this data should allow for any patterns to be visible, and to identify what their population relationship is. 
+
+The R dataset "Lynx" and "Hare" will provide the data for this problem, so there is no need to construct prospective data. This dataset is accessed via the package "astsa". 
+
+The data required is the number of hares and lynx in a given year, over many years. 
+(Ex. 1901: Hares- 1,125, Lynx- 2,249), which can visualized in graphs. 
