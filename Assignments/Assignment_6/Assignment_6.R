@@ -1,5 +1,5 @@
 library(tidyverse)
-dat <- read.csv('Data/BioLog_Plate_Data.csv')
+dat <- read.csv('BioLog_Plate_Data.csv')
 
 ##1. Cleans this data into tidy (long) form
 tidy_dat <- dat %>%
