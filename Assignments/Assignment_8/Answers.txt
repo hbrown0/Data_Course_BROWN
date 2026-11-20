@@ -1,0 +1,22 @@
+1. Are any of your predicted response values from your best model scientifically meaningless? Explain.
+
+Even though the relationship of growth rate with Nitrogen seems more curved (increases then decreases), the best predicted model showed straight lines for the growth rate, which is clearly not accurate. 
+
+2. In your plots, did you find any non-linear relationships? Do a bit of research online and give a link to at least one resource explaining how to deal with modeling non-linear relationships in R.
+
+As stated above, yes. It seems that Nitrogen has a non-linear relationship with growth rate. Here is one link to a website that explains how to model non-linear relationships in R. https://www.geeksforgeeks.org/r-language/non-linear-regression-in-r/ 
+
+3. Write the code you would use to model the data found in “/Data/non_linear_relationship.csv” with a linear model (there are a few ways of doing this)
+
+# Fit a linear model predicting response from predictor
+linear_mod <- lm(response ~ predictor, data = df)
+
+# Calculate MSE and plot the straight-line fit over the data
+mse_linear <- mean((df$response - fitted(linear_mod))^2)
+cat("Linear Model MSE:", round(mse_linear, 4), "\n")
+
+ggplot(df, aes(x = predictor, y = response)) +
+  geom_point(alpha = 0.4) +
+  geom_smooth(method = "lm", se = TRUE, color = "red") +
+  labs(x = "Predictor", y = "Response") +
+  theme_minimal()
